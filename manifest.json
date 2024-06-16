@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "视频文案一键提取DY",
+  "version": "1.0",
+  "description": "置顶插件，点击一次，提取抖音链接的文案 并纠正错别字，必须是在抖音视频的详情页，南哥团队开发，VX：meihaoshenghuo6066",
+  "permissions": [
+    "activeTab",
+    "https://api.coze.cn/*",
+    "clipboardWrite"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.douyin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
